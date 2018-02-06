@@ -10,7 +10,11 @@ public class OrdersService {
 	}
 	
 	public void accountMoney(){
+		//System.out.println("accountMoney start...");
 		ordersDao.lessMoney();
+		
+		//故障引起中断
+		int a = 10/0;
 		
 		ordersDao.moreMoney();
 	}
